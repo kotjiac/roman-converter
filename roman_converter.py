@@ -1,5 +1,4 @@
 import re
-import sys
 
 def roman_to_int(s: str) -> int:
     # Função para verificar se o numeral romano é válido
@@ -38,15 +37,3 @@ def roman_to_int(s: str) -> int:
         prev_value = value
     
     return result
-
-if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        print("Uso: python roman_converter.py <numeral_romano>")
-        sys.exit(1)
-    
-    numeral_romano = sys.argv[1]
-    try:
-        resultado = roman_to_int(numeral_romano)
-        print(f"O numeral romano {numeral_romano} equivale ao número {resultado}")
-    except ValueError as e:
-        print(e)
